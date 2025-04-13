@@ -1,0 +1,53 @@
+<odoo>
+    <record id="view_region_form" model="ir.ui.view">
+        <field name="name">mapa.region.form</field>
+        <field name="model">mapa.region</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="name"/>
+                            <field name="country_id"/>
+                            <field name="color" widget="color"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image" class="oe_avatar"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Descripción">
+                            <field name="description" widget="html"/>
+                        </page>
+                        <page string="GeoData">
+                            <field name="geo_data" widget="textarea" placeholder="Pegar GeoJSON aquí"/>
+                        </page>
+                        <page string="Detalles Técnicos">
+                            <field name="climate" widget="textarea"/>
+                            <field name="soil" widget="textarea"/>
+                            <field name="grapes" widget="textarea"/>
+                        </page>
+                        <page string="Relaciones">
+                            <field name="producers_ids" widget="many2many_tags"/>
+                            <field name="wine_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_region_tree" model="ir.ui.view">
+        <field name="name">mapa.region.tree</field>
+        <field name="model">mapa.region</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="country_id"/>
+                <field name="color" widget="color"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mapa_vinoysefue,mapa.vinoysefue,model_mapa_vinoysefue,base.group_user,1,1,1,1
+access_mapa_region,mapa.region,model_mapa_region,base.group_user,1,1,1,1

@@ -1,0 +1,5 @@
+<odoo>
+    <menuitem id="menu_mapas_root" name="Mapas" sequence="10"/>
+    <menuitem id="menu_mapas_vinoysefue" name="Mapa Vino y Se Fue" 
+            parent="menu_mapas_root" sequence="10"/>
+</odoo>

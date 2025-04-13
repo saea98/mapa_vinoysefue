@@ -1,0 +1,30 @@
+<odoo>
+    <template id="mapa_template" name="Mapa Template">
+        <div class="mapa-vinoysefue-container">
+            <div class="mapa-header">
+                <h2 class="mapa-title">Seleccione una región</h2>
+                <h4 class="mapa-subtitle text-muted"></h4>
+            </div>
+            <div class="mapa-container" style="height: 70vh; width: 100%;"></div>
+        </div>
+    </template>
+
+    <template id="public_mapa_template" name="Public Map Template" inherit_id="website.layout">
+        <xpath expr="//div[@id='wrap']" position="inside">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 t-field="mapa.name"/>
+                        <div class="mapa-vinoysefue-container">
+                            <div class="mapa-header">
+                                <h2 class="mapa-title">Seleccione una región</h2>
+                                <h4 class="mapa-subtitle text-muted"></h4>
+                            </div>
+                            <div id="public_mapa_vinoysefue" style="height: 70vh; width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
