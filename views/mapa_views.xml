@@ -1,4 +1,23 @@
 <odoo>
+    <!-- Menú raíz -->
+    <record id="menu_mapas_root" model="ir.ui.menu">
+        <field name="name">Mapas</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <!-- Vista de lista -->
+    <record id="view_mapa_tree" model="ir.ui.view">
+        <field name="name">mapa.vinoysefue.tree</field>
+        <field name="model">mapa.vinoysefue</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="website_published" widget="boolean_button"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario -->
     <record id="view_mapa_form" model="ir.ui.view">
         <field name="name">mapa.vinoysefue.form</field>
         <field name="model">mapa.vinoysefue</field>
@@ -28,29 +47,18 @@
         </field>
     </record>
 
-    <record id="view_mapa_tree" model="ir.ui.view">
-        <field name="name">mapa.vinoysefue.tree</field>
-        <field name="model">mapa.vinoysefue</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="website_published" widget="boolean_button"/>
-            </tree>
-        </field>
-    </record>
-
-
-    <record id="menu_mapas_vinoysefue" model="ir.ui.menu">
-        <field name="name">Mapa Vino y Se Fue</field>
-        <field name="action">action_mapa_vinoysefue</field>
-        <field name="parent_id" eval="ref('mapa_vinoysefue.menu_mapas_root')"/>
-        <field name="sequence">10</field>
-    </record>
-
+    <!-- Acción de ventana -->
     <record id="action_mapa_vinoysefue" model="ir.actions.act_window">
         <field name="name">Mapas Vino y Se Fue</field>
         <field name="res_model">mapa.vinoysefue</field>
         <field name="view_mode">tree,form</field>
     </record>
-</odoo>
 
+    <!-- Menú hijo -->
+    <record id="menu_mapas_vinoysefue" model="ir.ui.menu">
+        <field name="name">Mapa Vino y Se Fue</field>
+        <field name="action" ref="mapa_vinoysefue.action_mapa_vinoysefue"/>
+        <field name="parent_id" eval="ref('mapa_vinoysefue.menu_mapas_root')"/>
+        <field name="sequence">10</field>
+    </record>
+</odoo>

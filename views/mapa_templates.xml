@@ -9,8 +9,8 @@
         </div>
     </template>
 
-    <template id="public_mapa_template" name="Public Map Template" inherit_id="website.layout">
-        <xpath expr="//div[@id='wrap']" position="inside">
+    <template id="public_mapa_template" name="Public Map Template">
+        <t t-call="website.layout">
             <div class="container mt-4">
                 <div class="row">
                     <div class="col-md-12">
@@ -25,6 +25,6 @@
                     </div>
                 </div>
             </div>
-        </xpath>
+        </t>
     </template>
 </odoo>
