@@ -39,9 +39,12 @@
         </field>
     </record>
 
-    
+
     <record id="menu_mapas_vinoysefue" model="ir.ui.menu">
+        <field name="name">Mapa Vino y Se Fue</field>
         <field name="action">action_mapa_vinoysefue</field>
+        <field name="parent_id" eval="ref('mapa_vinoysefue.menu_mapas_root')"/>
+        <field name="sequence">10</field>
     </record>
 
     <record id="action_mapa_vinoysefue" model="ir.actions.act_window">

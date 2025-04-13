@@ -12,10 +12,10 @@
     'depends': ['base', 'web', 'website', 'product'],
     'data': [
         'security/ir.model.access.csv',
+        'views/mapa_views.xml',  # Luego las acciones y menús hijos
         'views/region_views.xml',
-        'views/mapa_views.xml',
         'views/mapa_templates.xml',
-        'views/menu_views.xml',
+        'views/menu_views.xml',  # Primero el menú padre
     ],
     'assets': {
         'web.assets_backend': [
