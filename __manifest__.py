@@ -15,17 +15,18 @@
         'views/mapa_views.xml',  # Luego las acciones y menús hijos
         'views/region_views.xml',
         'views/mapa_templates.xml',
+        'views/snippets.xml',
         'views/menu_views.xml',  # Primero el menú padre
     ],
     'assets': {
-        'web.assets_backend': [
+        'web.assets_frontend': [
+            'mapa_vinoysefue/static/lib/leaflet/leaflet.css',
+            'mapa_vinoysefue/static/lib/leaflet/leaflet.js',
             'mapa_vinoysefue/static/src/js/mapa_widget.js',
             'mapa_vinoysefue/static/src/scss/mapa_estilos.scss',
         ],
-        'website.assets_wysiwyg': [
-            'mapa_vinoysefue/static/src/js/mapa_widget.js',
-        ],
     },
+
     'demo': [],
     'installable': True,
     'application': True,

@@ -215,7 +215,10 @@ if (!odoo.__modules || !odoo.__modules['mapa_vinoysefue.MapaWidget']) {
             },
         });
 
-        registry.add('mapa_vinoysefue_widget', MapaVinoYSeFueWidget);
+        //registry.add('mapa_vinoysefue_widget', MapaVinoYSeFueWidget);
+        if (!odoo.isWebsiteEditor) {
+            registry.add('mapa_vinoysefue_widget', MapaVinoYSeFueWidget);
+        }
         return MapaVinoYSeFueWidget;
     });
 }

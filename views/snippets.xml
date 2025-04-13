@@ -1,0 +1,16 @@
+<odoo>
+  <template id="snippet_mapa_vinoysefue" name="🗺️ Mapa interactivo Vino y Se Fue" inherit_id="website.snippets" priority="20">
+    <xpath expr="//div[@id='snippet_structure']/t[@t-name='website.snippets_structure']" position="inside">
+      <t t-snippet="mapa_vinoysefue.snippet_mapa_vinoysefue" t-thumbnail="/mapa_vinoysefue/static/src/img/snippet_thumbnail.png"/>
+    </xpath>
+  </template>
+
+  <template id="snippet_mapa_vinoysefue_content" name="Mapa Widget Contenido" customize_show="True">
+    <section class="s_mapo_snippet o_custom_map_block bg-white py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">🗺️ Mapa del vino y se fue</h2>
+        <div data-widget="mapa_vinoysefue_widget" data-mapa-id="1" class="mapa-container" style="height: 500px;"></div>
+      </div>
+    </section>
+  </template>
+</odoo>

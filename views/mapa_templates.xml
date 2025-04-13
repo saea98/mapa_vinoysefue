@@ -9,7 +9,7 @@
         </div>
     </template>
 
-    <template id="public_mapa_template" name="Public Map Template">
+    <template id="public_mapa_template" name="Mapa Vino y Se Fue">
         <t t-call="website.layout">
             <div class="container mt-4">
                 <div class="row">

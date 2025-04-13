@@ -25,7 +25,10 @@
             <form>
                 <header>
                     <field name="website_published" widget="website_radio"/>
-                    <button name="open_map_view" type="object" string="Ver Mapa" class="oe_highlight"/>
+                    <button name="action_ver_mapa"
+                        type="object"
+                        string="Ver Mapa"
+                        class="btn-primary"/>
                 </header>
                 <sheet>
                     <group>
