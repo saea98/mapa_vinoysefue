@@ -1,0 +1,66 @@
+.wine-map-wrapper {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    
+    .wine-map-header {
+        padding: 15px 20px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+        
+        .map-title {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        
+        .map-subtitle {
+            margin: 5px 0 0 0;
+            font-size: 1rem;
+        }
+    }
+    
+    .wine-map-container {
+        background-color: #f5f2e9; // Color fondo similar a Kermit Lynch
+    }
+}
+
+.region-detail-container {
+    padding: 15px;
+    
+    h4 {
+        margin-top: 20px;
+        color: #7a2518; // Color vino tinto
+        font-size: 1.2rem;
+    }
+    
+    .producer-tags {
+        margin-bottom: 15px;
+    }
+}
+
+// Estilo para el mapa público
+#public_wine_map {
+    background-color: #f5f2e9;
+    
+    .leaflet-popup-content {
+        h4 {
+            color: #7a2518;
+            margin-top: 0;
+        }
+        
+        .btn {
+            background-color: #7a2518;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            display: inline-block;
+            
+            &:hover {
+                background-color: #5a1c12;
+            }
+        }
+    }
+}
